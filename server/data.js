@@ -1,13 +1,6 @@
-import { readFileSync } from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export const sampleProducts = [
+const products = [
   {
-    id: 'prod_001',
+    id: 1,
     slug: 'midnight-otaku-overshirt',
     name: 'Midnight Otaku Overshirt',
     category: 'Streetwear',
@@ -17,18 +10,18 @@ export const sampleProducts = [
     rating: 4.9,
     reviews: 178,
     featured: true,
+    bestseller: true,
+    newArrival: true,
     collection: 'Tokyo Night',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Black', 'White'],
-    description: 'Premium manga-inspired oversized shirt with heavyweight cotton and subtle anime-inspired artwork.',
-    image: '/assets/images/prod-1.jpg',
-    gallery: ['/assets/images/prod-1.jpg', '/assets/images/prod-2.jpg'],
-    tags: ['anime streetwear', 'oversized anime t-shirts'],
-    isNew: true,
-    bestseller: true
+    description: 'Heavyweight anime-inspired overshirt with premium construction and a sharp minimal finish.',
+    image: '/assets/images/prod-1.svg',
+    gallery: ['/assets/images/prod-1.svg', '/assets/images/prod-2.svg'],
+    tags: ['anime streetwear', 'oversized anime t-shirts']
   },
   {
-    id: 'prod_002',
+    id: 2,
     slug: 'kyoto-ember-hoodie',
     name: 'Kyoto Ember Hoodie',
     category: 'Hoodies',
@@ -38,18 +31,18 @@ export const sampleProducts = [
     rating: 4.8,
     reviews: 142,
     featured: true,
+    bestseller: true,
+    newArrival: true,
     collection: 'Urban Manga',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: ['Black', 'Orange'],
-    description: 'Warm fleece hoodie designed for late-night anime marathons and city exploring.',
-    image: '/assets/images/prod-2.jpg',
-    gallery: ['/assets/images/prod-2.jpg', '/assets/images/prod-3.jpg'],
-    tags: ['anime hoodies', 'limited edition anime drops'],
-    isNew: true,
-    bestseller: true
+    description: 'Heavy fleece hoodie built for late-night marathons and everyday street layering.',
+    image: '/assets/images/prod-2.svg',
+    gallery: ['/assets/images/prod-2.svg', '/assets/images/prod-3.svg'],
+    tags: ['anime hoodies', 'limited edition anime drops']
   },
   {
-    id: 'prod_003',
+    id: 3,
     slug: 'hikari-figure-stand',
     name: 'Hikari Figure Stand',
     category: 'Collectibles',
@@ -59,18 +52,18 @@ export const sampleProducts = [
     rating: 4.9,
     reviews: 134,
     featured: true,
+    bestseller: false,
+    newArrival: true,
     collection: 'Collector Vault',
     sizes: ['Standard'],
     colors: ['Black', 'White'],
-    description: 'Collector-grade display stand with original anime-inspired silhouette and premium finish.',
-    image: '/assets/images/prod-3.jpg',
-    gallery: ['/assets/images/prod-3.jpg', '/assets/images/prod-4.jpg'],
-    tags: ['manga collectibles', 'anime figures'],
-    isNew: true,
-    bestseller: false
+    description: 'Collector-grade display stand with clean premium geometry and anime-inspired sculptural language.',
+    image: '/assets/images/prod-3.svg',
+    gallery: ['/assets/images/prod-3.svg', '/assets/images/prod-4.svg'],
+    tags: ['manga collectibles', 'anime figures']
   },
   {
-    id: 'prod_004',
+    id: 4,
     slug: 'neon-archive-poster',
     name: 'Neon Archive Poster',
     category: 'Posters',
@@ -80,18 +73,18 @@ export const sampleProducts = [
     rating: 4.7,
     reviews: 98,
     featured: false,
+    bestseller: false,
+    newArrival: false,
     collection: 'Editorial Drops',
     sizes: ['A3', 'A2'],
     colors: ['Black', 'White'],
-    description: 'High-detail poster print featuring monochrome visuals with a bold orange accent treatment.',
-    image: '/assets/images/prod-4.jpg',
-    gallery: ['/assets/images/prod-4.jpg', '/assets/images/prod-5.jpg'],
-    tags: ['anime posters', 'anime gifts'],
-    isNew: false,
-    bestseller: false
+    description: 'Edition poster in monochrome and orange, designed for collector walls and creative spaces.',
+    image: '/assets/images/prod-4.svg',
+    gallery: ['/assets/images/prod-4.svg', '/assets/images/prod-5.svg'],
+    tags: ['anime posters', 'anime gifts']
   },
   {
-    id: 'prod_005',
+    id: 5,
     slug: 'tokyo-signal-keychain',
     name: 'Tokyo Signal Keychain',
     category: 'Accessories',
@@ -101,86 +94,115 @@ export const sampleProducts = [
     rating: 4.8,
     reviews: 96,
     featured: false,
+    bestseller: false,
+    newArrival: true,
     collection: 'Daily Carry',
     sizes: ['One Size'],
     colors: ['Black', 'Orange'],
-    description: 'Compact keychain built for daily carry with premium metal finish and anime-inspired insignia.',
-    image: '/assets/images/prod-5.jpg',
-    gallery: ['/assets/images/prod-5.jpg', '/assets/images/prod-6.jpg'],
-    tags: ['anime accessories', 'anime keychains'],
-    isNew: true,
-    bestseller: false
+    description: 'Everyday metal keychain designed for daily carry and subtle anime-inspired brand expression.',
+    image: '/assets/images/prod-5.svg',
+    gallery: ['/assets/images/prod-5.svg', '/assets/images/prod-6.svg'],
+    tags: ['anime accessories', 'anime keychains']
   },
   {
-    id: 'prod_006',
+    id: 6,
     slug: 'harbor-tattoo-tee',
     name: 'Harbor Tattoo Tee',
-    category: 'T-Shirts',
+    category: 'Streetwear',
     price: 2599,
     originalPrice: 3199,
     stock: 11,
     rating: 4.8,
     reviews: 212,
     featured: true,
+    bestseller: true,
+    newArrival: true,
     collection: 'Streetwear Essentials',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Black', 'White'],
-    description: 'Minimalist screen-printed T-shirt inspired by streetwear silhouettes and manga storytelling.',
-    image: '/assets/images/prod-6.jpg',
-    gallery: ['/assets/images/prod-6.jpg', '/assets/images/prod-1.jpg'],
-    tags: ['anime streetwear', 'Japanese streetwear'],
-    isNew: true,
-    bestseller: true
+    description: 'Minimalist graphic tee with premium cotton and a refined anime-inspired concept.',
+    image: '/assets/images/prod-6.svg',
+    gallery: ['/assets/images/prod-6.svg', '/assets/images/prod-1.svg'],
+    tags: ['anime streetwear', 'Japanese streetwear']
+  },
+  {
+    id: 7,
+    slug: 'vanta-noir-bomber',
+    name: 'Vanta Noir Bomber',
+    category: 'Streetwear',
+    price: 5399,
+    originalPrice: 6499,
+    stock: 8,
+    rating: 4.9,
+    reviews: 87,
+    featured: true,
+    bestseller: false,
+    newArrival: false,
+    collection: 'Urban Anime',
+    sizes: ['M', 'L', 'XL'],
+    colors: ['Black'],
+    description: 'Archival bomber silhouette with premium detailing and a controlled monochrome finish.',
+    image: '/assets/images/prod-7.svg',
+    gallery: ['/assets/images/prod-7.svg', '/assets/images/prod-8.svg'],
+    tags: ['anime streetwear', 'Japanese streetwear']
+  },
+  {
+    id: 8,
+    slug: 'samurai-static-mug',
+    name: 'Samurai Static Mug',
+    category: 'Accessories',
+    price: 899,
+    originalPrice: 1199,
+    stock: 34,
+    rating: 4.7,
+    reviews: 76,
+    featured: false,
+    bestseller: false,
+    newArrival: false,
+    collection: 'Daily Ritual',
+    sizes: ['Regular'],
+    colors: ['Black', 'Orange'],
+    description: 'Premium ceramic mug designed for studio sessions, coffee rituals, and desk setups.',
+    image: '/assets/images/prod-8.svg',
+    gallery: ['/assets/images/prod-8.svg', '/assets/images/prod-1.svg'],
+    tags: ['anime accessories', 'anime gifts']
   }
 ];
 
-export const blogPosts = [
+const blogs = [
   {
-    id: 'blog_001',
-    slug: 'behind-the-scenes-tokyo-drop',
+    id: 1,
     title: 'Behind the Scenes of AKANESHI’s Tokyo-Inspired Drop',
-    excerpt: 'A look into the design process, materials, and creative direction behind our latest collection.',
-    image: '/assets/images/blog-1.jpg',
+    excerpt: 'A look into the design language, materials, and creative direction behind our latest collection.',
     category: 'Behind the Scenes',
-    status: 'published',
-    author: 'AKANESHI Studio',
-    createdAt: '2026-09-01'
+    date: '2026-09-01',
+    image: '/assets/images/blog-1.svg'
   },
   {
-    id: 'blog_002',
-    slug: 'how-to-style-anime-streetwear',
+    id: 2,
     title: 'How to Style Anime Streetwear Without Losing Minimalism',
-    excerpt: 'Keep your look premium, layered, and balanced with a sharp monochrome base and orange accents.',
-    image: '/assets/images/blog-2.jpg',
+    excerpt: 'Balance your look with monochrome layers and purposeful orange accents for a premium finish.',
     category: 'Style Guide',
-    status: 'published',
-    author: 'AKANESHI Studio',
-    createdAt: '2026-09-12'
+    date: '2026-09-12',
+    image: '/assets/images/blog-2.svg'
+  },
+  {
+    id: 3,
+    title: 'Collector Essentials for a Premium Anime Room Setup',
+    excerpt: 'Design ideas for a thoughtful collector environment shaped by streetwear, manga references, and product display.',
+    category: 'Culture',
+    date: '2026-09-20',
+    image: '/assets/images/blog-3.svg'
   }
 ];
 
-export const testimonials = [
-  {
-    name: 'Priya S.',
-    location: 'Mumbai',
-    rating: 5,
-    comment: 'The quality is premium, and the design language feels authentically anime-inspired without being loud.'
-  },
-  {
-    name: 'Rohit K.',
-    location: 'Delhi',
-    rating: 5,
-    comment: 'Fast shipping, premium finish, and the hoodie feels like a collector piece. Highly recommended.'
-  },
-  {
-    name: 'Aanya M.',
-    location: 'Bengaluru',
-    rating: 5,
-    comment: 'Loved the packaging and the clarity of the product details. My order arrived exactly as described.'
-  }
+const testimonials = [
+  { name: 'Priya S.', location: 'Mumbai', rating: 5, comment: 'The quality is premium, and the design language feels authentic without being overdone.' },
+  { name: 'Rohit K.', location: 'Delhi', rating: 5, comment: 'Shipping was smooth and the hoodie feels like a premium collector piece.' },
+  { name: 'Aanya M.', location: 'Bengaluru', rating: 5, comment: 'The finish and attention to detail feel premium. I would definitely order again.' }
 ];
 
-export const searchTrends = [
+const searchTrends = [
   'anime streetwear',
   'oversized anime t-shirts',
   'anime hoodies',
@@ -195,16 +217,4 @@ export const searchTrends = [
   'limited edition anime drops'
 ];
 
-export const defaultNav = [
-  { label: 'Home', href: '/' },
-  { label: 'Shop', href: '/shop.html' },
-  { label: 'Collections', href: '/shop.html#collections' },
-  { label: 'Latest Drops', href: '/shop.html#drops' },
-  { label: 'Anime Blog', href: '/blog.html' },
-  { label: 'About', href: '/index.html#story' },
-  { label: 'Contact', href: '/contact.html' }
-];
-
-export function serializeProducts() {
-  return JSON.parse(readFileSync(path.join(__dirname, '..', 'server', 'data.json'), 'utf8'));
-}
+module.exports = { products, blogs, testimonials, searchTrends };

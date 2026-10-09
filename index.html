@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKANESHI | Anime Culture. Streetwear. Collectibles.</title>
+    <meta name="description" content="AKANESHI is a premium anime-inspired streetwear and collectibles store featuring limited drops, manga-inspired apparel, and original collector pieces." />
+    <meta property="og:title" content="AKANESHI | Anime Culture. Streetwear. Collectibles" />
+    <meta property="og:description" content="Discover premium anime streetwear, collectibles, posters, and limited drops at AKANESHI." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/images/og-cover.svg" />
+    <link rel="canonical" href="https://www.akaneshi.in/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="/index.html" aria-label="AKANESHI home">AKANESHI</a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/index.html" class="active">Home</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/shop.html#collections">Collections</a></li>
+            <li><a href="/shop.html#drops">Latest Drops</a></li>
+            <li><a href="/blog.html">Anime Blog</a></li>
+            <li><a href="/index.html#story">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button class="icon-button" type="button" aria-label="Search">
+              <span>Search</span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Wishlist">
+              <span>Wishlist</span><span class="pill" data-wishlist-count>0</span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Shopping cart">
+              <span>Cart</span><span class="pill" data-cart-count>0</span>
+            </button>
+            <a class="button button-small button-outline" href="/login.html">Login / Account</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="/assets/images/poster.webp">
+          <source src="/assets/video.webm" type="video/webm" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <p class="eyebrow">Premium anime essentials</p>
+          <h1>AKANESHI</h1>
+          <p class="hero-subtitle">ANIME CULTURE. STREETWEAR. COLLECTIBLES.</p>
+          <p class="hero-copy">Discover your next obsession.</p>
+          <div class="hero-actions">
+            <a class="button" href="/shop.html">SHOP NOW</a>
+            <a class="button button-secondary" href="/shop.html#collections">EXPLORE COLLECTION</a>
+            <a class="button button-ghost" href="/index.html#story">OUR STORY</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="collections">
+        <div class="section-header">
+          <p class="eyebrow">Curated collection</p>
+          <h2>Trending Anime Collection</h2>
+        </div>
+        <div class="featured-grid" data-featured-products></div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Freshly dropped</p>
+            <h2>New Arrivals</h2>
+          </div>
+          <div class="product-grid" data-new-arrivals></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-header section-header-row">
+          <div>
+            <p class="eyebrow">Insights</p>
+            <h2>Trending Searches</h2>
+          </div>
+        </div>
+        <div class="tag-cloud" data-trending-searches></div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Best of AKANESHI</p>
+            <h2>Best Sellers</h2>
+          </div>
+          <div class="product-grid" data-best-sellers></div>
+        </div>
+      </section>
+
+      <section class="section container" id="drops">
+        <div class="section-header">
+          <p class="eyebrow">Limited inventory</p>
+          <h2>Limited Drops</h2>
+        </div>
+        <div class="drop-list" id="drop-list"></div>
+      </section>
+
+      <section class="section story-block" id="story">
+        <div class="container story-grid">
+          <div class="story-copy">
+            <p class="eyebrow">Brand story</p>
+            <h2>Built for fans of anime culture and the everyday style behind it.</h2>
+            <p>AKANESHI brings together anime culture, Japanese-inspired aesthetics, and premium streetwear in a single design language. From collector-grade merchandise to everyday silhouettes, each piece is shaped by the energy of the city, the obsession of fandom, and the precision of craft.</p>
+            <p>We design for people who live between digital culture and real-world identity — with minimal palettes, elevated details, and pieces built to move with the rhythm of modern life.</p>
+            <a class="button" href="/contact.html">Contact the brand</a>
+          </div>
+          <div class="story-visual">
+            <div class="story-card large"></div>
+            <div class="story-card small"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-header">
+          <p class="eyebrow">From the journal</p>
+          <h2>Latest Posts & Anime Blog</h2>
+        </div>
+        <div class="blog-grid" data-blog-posts></div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Verified impact</p>
+            <h2>Customer Reviews</h2>
+          </div>
+          <div class="testimonial-grid" data-testimonials></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="newsletter-block">
+          <div>
+            <p class="eyebrow">Stay connected</p>
+            <h2>Newsletter subscription</h2>
+          </div>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" placeholder="Enter your email" required />
+            <button type="submit" class="button">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section alt-section" id="insta">
+        <div class="container">
+          <div class="section-header section-header-row">
+            <div>
+              <p class="eyebrow">Instagram</p>
+              <h2>Showcase</h2>
+            </div>
+            <a class="button button-small" href="https://www.instagram.com/_akane__shi?srtk=b3NudWpsZGQ0azdk" target="_blank" rel="noreferrer">Visit profile</a>
+          </div>
+          <div class="insta-grid">
+            <div class="insta-card card-1"></div>
+            <div class="insta-card card-2"></div>
+            <div class="insta-card card-3"></div>
+            <div class="insta-card card-4"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="/index.html" class="brand footer-brand">AKANESHI</a>
+          <p>Anime culture, streetwear, collectibles, and digital creativity in one premium storefront.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/account.html">Account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="/shipping.html">Shipping Policy</a></li>
+            <li><a href="/returns.html">Returns & Refunds</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="mailto:akaneshi010@gmail.com">akaneshi010@gmail.com</a></li>
+            <li><a href="tel:+919828491235">+91 98284 91235</a></li>
+            <li><a href="https://www.instagram.com/_akane__shi?srtk=b3NudWpsZGQ0azdk" target="_blank" rel="noreferrer">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <span>© 2026 AKANESHI. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

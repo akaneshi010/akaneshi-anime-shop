@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | AKANESHI</title>
+    <meta name="description" content="Explore AKANESHI collections including anime streetwear, posters, collectibles, accessories, and limited-edition drops." />
+    <link rel="canonical" href="https://www.akaneshi.in/shop" />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="/index.html">AKANESHI</a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/shop.html" class="active">Shop</a></li>
+            <li><a href="/shop.html#collections">Collections</a></li>
+            <li><a href="/shop.html#drops">Latest Drops</a></li>
+            <li><a href="/blog.html">Anime Blog</a></li>
+            <li><a href="/index.html#story">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button class="icon-button" type="button">Search</button>
+            <button class="icon-button" type="button">Wishlist <span class="pill" data-wishlist-count>0</span></button>
+            <button class="icon-button" type="button">Cart <span class="pill" data-cart-count>0</span></button>
+            <a class="button button-small button-outline" href="/login.html">Login / Account</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="section container shop-layout">
+        <aside class="shop-sidebar">
+          <div class="filter-card">
+            <h3>Filters</h3>
+            <div class="filter-group">
+              <label for="category-filter">Category</label>
+              <select id="category-filter">
+                <option value="all">All</option>
+                <option value="Streetwear">Streetwear</option>
+                <option value="Hoodies">Hoodies</option>
+                <option value="Collectibles">Collectibles</option>
+                <option value="Posters">Posters</option>
+                <option value="Accessories">Accessories</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="sort-filter">Sort</label>
+              <select id="sort-filter">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="popular">Popularity</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-card">
+            <h3>Trending searches</h3>
+            <div class="tag-cloud compact" data-trending-searches></div>
+          </div>
+        </aside>
+        <div class="shop-content">
+          <div class="shop-toolbar">
+            <div>
+              <p class="eyebrow">AKANESHI Shop</p>
+              <h1>Curated anime essentials</h1>
+            </div>
+            <form class="search-form" id="shop-search-form">
+              <input type="search" id="shop-search" placeholder="Search products" aria-label="Search products" />
+            </form>
+          </div>
+          <div id="shop-product-grid" class="product-grid large-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="/index.html" class="brand footer-brand">AKANESHI</a>
+          <p>Anime culture, streetwear, and collector goods.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="/shipping.html">Shipping</a></li>
+            <li><a href="/returns.html">Returns</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="mailto:akaneshi010@gmail.com">akaneshi010@gmail.com</a></li>
+            <li><a href="tel:+919828491235">+91 98284 91235</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container"><span>© 2026 AKANESHI.</span></div>
+    </footer>
+  </body>
+</html>

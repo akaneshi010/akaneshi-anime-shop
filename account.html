@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account | AKANESHI</title>
+    <meta name="description" content="Manage your AKANESHI account, addresses, saved wishlist, and recent orders." />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="/index.html">AKANESHI</a>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/account.html" class="active">My Account</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="section container account-layout">
+        <aside class="profile-panel">
+          <h2>Account</h2>
+          <ul class="account-links">
+            <li><a href="/account.html">Overview</a></li>
+            <li><a href="/account.html#orders">Orders</a></li>
+            <li><a href="/account.html#addresses">Addresses</a></li>
+            <li><a href="/account.html#settings">Settings</a></li>
+          </ul>
+        </aside>
+        <div class="account-content">
+          <div class="profile-summary">
+            <h1>Welcome back, Collector</h1>
+            <p>Your saved wishlist, recent orders, and shipping details are ready.</p>
+          </div>
+          <div class="info-grid">
+            <div class="info-card">
+              <p class="eyebrow">Saved wishlist</p>
+              <h3>6 items</h3>
+            </div>
+            <div class="info-card">
+              <p class="eyebrow">Orders</p>
+              <h3>3 active</h3>
+            </div>
+            <div class="info-card">
+              <p class="eyebrow">Account status</p>
+              <h3>Verified</h3>
+            </div>
+          </div>
+          <div class="section-split">
+            <div class="order-box" id="orders">
+              <h3>Recent orders</h3>
+              <ul>
+                <li>AK-982412 · Shipped</li>
+                <li>AK-735241 · Processing</li>
+                <li>AK-415782 · Delivered</li>
+              </ul>
+            </div>
+            <div class="order-box" id="addresses">
+              <h3>Saved addresses</h3>
+              <p>21 Sora Lane, Mumbai, Maharashtra 400001</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

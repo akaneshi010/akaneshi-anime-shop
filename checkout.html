@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | AKANESHI</title>
+    <meta name="description" content="Secure checkout for AKANESHI orders with payment verification, shipping information, and order confirmation." />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="/index.html">AKANESHI</a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/cart.html">Cart</a></li>
+            <li><a href="/checkout.html" class="active">Checkout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="section container checkout-layout">
+        <div class="checkout-form-shell">
+          <div class="section-header left">
+            <p class="eyebrow">Secure checkout</p>
+            <h1>Checkout</h1>
+          </div>
+          <form id="checkout-form" class="checkout-form" novalidate>
+            <h3>Shipping details</h3>
+            <div class="form-row two-col">
+              <input type="text" name="firstName" placeholder="First name" required />
+              <input type="text" name="lastName" placeholder="Last name" required />
+            </div>
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="tel" name="phone" placeholder="Mobile number" required />
+            <input type="text" name="address1" placeholder="Street address" required />
+            <input type="text" name="address2" placeholder="Apartment / Suite (optional)" />
+            <div class="form-row two-col">
+              <input type="text" name="city" placeholder="City" required />
+              <input type="text" name="state" placeholder="State" required />
+            </div>
+            <div class="form-row two-col">
+              <input type="text" name="pin" placeholder="PIN code" required />
+              <input type="text" name="country" value="India" readonly />
+            </div>
+
+            <h3>Payment</h3>
+            <div class="payment-options">
+              <label><input type="radio" name="paymentMethod" checked value="upi" /> UPI</label>
+              <label><input type="radio" name="paymentMethod" value="card" /> Debit / Credit Card</label>
+              <label><input type="radio" name="paymentMethod" value="netbanking" /> Net Banking</label>
+            </div>
+            <input type="text" name="paymentRef" placeholder="UPI ID or payment reference" />
+
+            <button type="submit" class="button full-width">Place order</button>
+          </form>
+        </div>
+        <aside class="checkout-summary-shell">
+          <h3>Order summary</h3>
+          <div id="order-summary"></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="/index.html" class="brand footer-brand">AKANESHI</a>
+          <p>Anime culture, streetwear, and collector goods.</p>
+        </div>
+      </div>
+      <div class="footer-bottom container"><span>© 2026 AKANESHI.</span></div>
+    </footer>
+  </body>
+</html>

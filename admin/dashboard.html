@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | AKANESHI</title>
+    <meta name="description" content="AKANESHI administrator dashboard for product, order, and content management." />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header admin-header">
+      <nav class="nav container" aria-label="Admin navigation">
+        <a class="brand" href="/index.html">AKANESHI</a>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="/admin/dashboard.html" class="active">Overview</a></li>
+            <li><a href="/admin/dashboard.html#products">Products</a></li>
+            <li><a href="/admin/dashboard.html#orders">Orders</a></li>
+            <li><a href="/admin/dashboard.html#blog">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell admin-shell">
+      <section class="container admin-grid">
+        <aside class="admin-sidebar">
+          <h2>Control Center</h2>
+          <ul>
+            <li>Overview</li>
+            <li>Products</li>
+            <li>Orders</li>
+            <li>Payments</li>
+            <li>Blog</li>
+            <li>Customers</li>
+            <li>Coupons</li>
+          </ul>
+        </aside>
+        <div class="admin-main">
+          <div class="dashboard-top">
+            <h1>Admin Dashboard</h1>
+            <button class="button button-small">Log out</button>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card"><span>Revenue</span><strong>₹8.4L</strong></div>
+            <div class="stat-card"><span>Orders</span><strong>231</strong></div>
+            <div class="stat-card"><span>Products</span><strong>98</strong></div>
+            <div class="stat-card"><span>Pending</span><strong>14</strong></div>
+          </div>
+          <div class="admin-panels">
+            <div class="admin-panel" id="products">
+              <h3>Recent products</h3>
+              <ul>
+                <li>Midnight Otaku Overshirt · 14 in stock</li>
+                <li>Kyoto Ember Hoodie · 9 in stock</li>
+                <li>Neon Archive Poster · 24 in stock</li>
+              </ul>
+            </div>
+            <div class="admin-panel" id="orders">
+              <h3>Recent orders</h3>
+              <ul>
+                <li>AK-884291 · Paid</li>
+                <li>AK-884127 · Pending</li>
+                <li>AK-883814 · Refunded</li>
+              </ul>
+            </div>
+            <div class="admin-panel" id="blog">
+              <h3>Blog updates</h3>
+              <ul>
+                <li>Tokyo drop behind-the-scenes article</li>
+                <li>Streetwear styling guide</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
